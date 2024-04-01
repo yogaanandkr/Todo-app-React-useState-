@@ -1,17 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { StrictMode } from "react";
+import ReactDOM from "react-dom/client";
+import Todo from "./Todo";
+let root = ReactDOM.createRoot(document.getElementById("root"));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// let obj = [
+//   {
+//     name: "anand",
+//     age: 22,
+//   },
+//   {
+//     name: "yoga",
+//     age: 20,
+//   },
+// ];
+// const index = obj.findIndex(item => item.name === "yoga" && item.age === 20);
+// console.log("index of", index);
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <StrictMode>
+    <Todo></Todo>
+  </StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
