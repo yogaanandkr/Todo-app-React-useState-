@@ -1,6 +1,6 @@
 import { useState } from "react";
-// import "./todo.css";
-import "./todo2.css";
+import "./todo.css";
+// import "./todo2.css";
 
 function Todo() {
   let [todos, settodos] = useState([]);
@@ -151,9 +151,23 @@ function Todo() {
                 </tr>
               ) : (
                 <tr key={index}>
-                  <td>{a.task}</td>
-                  <td>{`${a.target}   ${a.time}`}</td>
-                  <td>{a.createdAt}</td>
+                  <td className="taskdisp">
+                    <p>{a.task}</p>
+                  </td>
+                  <td className="targetdisp">
+                    <span>{a.target}</span> <br />
+                    <span>{a.time}</span>
+                  </td>
+                  <td className="targetdisp">
+                    <span>
+                      {a.createdAt.slice(0, a.createdAt.indexOf(" "))}
+                    </span>
+                    <br />
+                    <span>
+                      {a.createdAt.slice(a.createdAt.indexOf(" ") + 1)}
+                    </span>
+                  </td>
+
                   <td className="buttons">
                     <button onClick={() => deletetodo(a.task, a.target)}>
                       <i className="fa fa-trash" aria-hidden="true"></i>
@@ -176,7 +190,8 @@ function Todo() {
             <input id="target" type="date" />
             <input id="time" type="time" placeholder="time" />
           </td>
-          <td>
+          <td></td>
+          <td className="addtaskbtn">
             <button className="" onClick={add}>
               Add Task
             </button>

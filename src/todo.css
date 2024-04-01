@@ -1,34 +1,121 @@
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* todo2.css */
 
 .todo_title {
-  color: red;
   text-align: center;
-}
-
-td {
-  height: 40px;
-  width: 100px;
-  padding: 0px 10px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #ff4500; /* Gold */
+  color: #333;
   text-align: center;
 }
 
-.addtask {
-  display: block;
-  width: 100%;
-  margin-top: 10px;
+tr:nth-child(even) {
+  background-color: black; /* Light Salmon */
+  color: white;
 }
 
+tr:nth-child(even) button i {
+  color: white;
+}
+
+tr:hover {
+  background-color: #ff63475f;
+  color: black;
+  font-weight: bold;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.buttons button {
+  background-color: #ff6347; /* Tomato */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #ff4500; /* Orange Red */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+  border-color: #ff4500; /* Orange Red */
+  outline: none;
+}
+
+input[type="text"]::placeholder,
+input[type="date"]::placeholder,
+input[type="time"]::placeholder {
+  color: #aaa;
+}
+
+.addtaskbtn {
+  height: 100%;
+  /* display: flex; */
+  justify-content: center;
+  text-align: center;
+}
+
+.addtaskbtn button {
+  background-color: #ff4500;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bolder;
+  color: white;
+}
+
+button i {
+  color: black;
+}
+.taskdisp p {
+  width: 500px; /* Limit the width of the paragraph */
+  height: fit-content; /* Allow the height of the paragraph to fit its content */
+  white-space: normal; /* Allow the text to wrap within the paragraph */
+  word-wrap: break-word; /* Break long words if needed to prevent overflow */
+  overflow: hidden; /* Hide any content that overflows the paragraph */
+}
+
+.targetdisp {
+  height: 100%;
+  text-align: center;
+}
