@@ -1,5 +1,3 @@
-/* todo2.css */
-
 .todo_title {
   text-align: center;
   font-size: 24px;
@@ -90,8 +88,6 @@ input[type="time"]::placeholder {
 
 .addtaskbtn {
   height: 100%;
-  /* display: flex; */
-  justify-content: center;
   text-align: center;
 }
 
@@ -107,15 +103,35 @@ input[type="time"]::placeholder {
 button i {
   color: black;
 }
+
 .taskdisp p {
-  width: 500px; /* Limit the width of the paragraph */
-  height: fit-content; /* Allow the height of the paragraph to fit its content */
-  white-space: normal; /* Allow the text to wrap within the paragraph */
-  word-wrap: break-word; /* Break long words if needed to prevent overflow */
-  overflow: hidden; /* Hide any content that overflows the paragraph */
+  height: fit-content;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: hidden;
+  width: 300px;
 }
 
 .targetdisp {
-  height: 100%;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .taskdisp p {
+    width: 100px;
+  }
+
+  td {
+    width: 10vw;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .taskdisp p {
+    width: 100px;
+  }
+
+  td {
+    width: 5vw;
+  }
 }

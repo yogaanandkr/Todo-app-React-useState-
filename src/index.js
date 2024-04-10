@@ -1,6 +1,6 @@
 import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import Todo from "./Todo";
+import Todo from "./components/todo/Todo";
 let root = ReactDOM.createRoot(document.getElementById("root"));
 
 // let obj = [
